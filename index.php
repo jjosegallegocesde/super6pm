@@ -48,26 +48,28 @@
                         <button type="submit" class="btn btn-primary mt-2 btn-block" name="botonCalcular">Calcular</button>
                     </form>
 
-                    <?php  
+                    <?php if(isset($_POST["botonCalcular"])): ?>
+                       
+                       
+                        <h4 class="display-1">
+                            <?php
+                              $precioProducto1=$_POST["precio1"];
+                              $nombreProducto1=$_POST["producto1"];
+  
+                              $costoEnvio=5000;
+  
+                              $total=$precioProducto1+$costoEnvio;
+                             
+                              echo("El total de su compra es de: ".$total);
+                            ?>
+                        </h4>
                     
-                        if(isset($_POST["botonCalcular"])){
-                           
-                            $precioProducto1=$_POST["precio1"];
-                            $nombreProducto1=$_POST["producto1"];
-
-                            $costoEnvio=5000;
-
-                            $total=$precioProducto1+$costoEnvio;
-
-                            echo("El total de su compra es de: ".$total);
-
-
-
-
-                        }
+                    <?php endif ?>
                     
                     
-                    ?>
+                  
+                    
+                   
 
 
 
