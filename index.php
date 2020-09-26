@@ -50,11 +50,14 @@
 
                     <?php if(isset($_POST["botonCalcular"])): ?>
                        
+                    
                        
                         <h4 class="display-1">
                             <?php
                               $precioProducto1=$_POST["precio1"];
                               $nombreProducto1=$_POST["producto1"];
+
+                              
   
                               $costoEnvio=5000;
   
@@ -66,12 +69,6 @@
                     
                     <?php endif ?>
                     
-                    
-                  
-                    
-                   
-
-
 
                 </div>
             </div>
