@@ -9,6 +9,15 @@
 <body>
 
     <main>
+
+    <?php 
+        $productos=array(
+            array("arroz","diana",1600),
+            array("salchichas","zenu",5000),
+            array("huevos","avinal",2600),
+            array("azucar","incauca",3000)
+        );
+    ?>
     
     <table class="table">
         <thead>
@@ -19,26 +28,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            </tr>
+
+            <?php foreach($productos as $producto): ?>
+                
+                <tr>
+                    <th scope="row"><?php echo($producto[0]) ?></th>
+                    <td><?php echo($producto[1]) ?></td>
+                    <td><?php echo($producto[2]) ?></td>
+                </tr>
+
+            <?php endforeach?>
+            
         </tbody>
-</table>
+    </table>
 
     </main>
 
