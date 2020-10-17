@@ -10,7 +10,10 @@
 
     <main>
 
-    <?php 
+    <?php
+    
+        //cedula-nombre-apellido-contraseña-telefono
+
         $productos=array(
             array("arroz","diana",1600),
             array("salchichas","zenu",5000),
