@@ -18,6 +18,9 @@ function saludar($nombre){
 echo(saludar("j"));
 saludar($nombre);
 
+//funcion para sumar 2 numeros
+//retornas la suma lo multiplca por 2 y muestra en pantalla
+
 
 
 
