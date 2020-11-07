@@ -23,9 +23,33 @@
 
         print_r($usuarios);
 
-
-
     ?>
+
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-3">
+
+            <?php foreach($usuarios as $usuario):?>
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="http://placeimg.com/640/480/people" class="card-img-top" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title"><?php echo($usuario["nombre"]) ?></h3>
+                            <p class="card-text"><?php echo($usuario["descripcion"]) ?></p>
+                        </div>
+                    </div>
+                </div>
+
+            <?php endforeach?>
+
+        </div>
+    
+    
+    </div>
+
+
+
     
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
