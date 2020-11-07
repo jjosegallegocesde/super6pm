@@ -4,7 +4,7 @@ class BaseDatos {
 
 //atributos == variables
 public $usuarioBD="root";
-public $passwordBD="kjkajkjasdkjsdakjakajd";
+public $passwordBD="";
 
 
 
@@ -19,7 +19,7 @@ public function conectarBD(){
        
         $infoDB="mysql:host=localhost;dbname=tienda18";
         $conexionBD=new PDO($infoDB,$this->usuarioBD,$this->passwordBD);
-        echo("exito conectando");
+        return($conexionBD);
 
     }catch(PDOException $error){
 
@@ -27,10 +27,25 @@ public function conectarBD(){
 
     }
 
+}
 
+public function agregarDatos($consultaSQL){
 
+    //1.Conectarme a la base de datos
+    $conexionBD=$this->conectarBD();
 
+    //2.Preparar la consulta que se va a realizar
+    $consultaInsertarDatos= $conexionBD->prepare($consultaSQL);
 
+    //3. Ejecutar la consulta
+    $resultado=$consultaInsertarDatos->execute();
+
+    //4. Verificar el resultado
+    if($resultado){
+        echo("Registro agregado con exito");
+    }else{
+        echo("Error agregando el registro");
+    }
 
 }
 
