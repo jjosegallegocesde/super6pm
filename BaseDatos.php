@@ -26,7 +26,7 @@ public function conectarBD(){
         echo($error->getMessage());
 
     }
-
+    
 }
 
 public function agregarDatos($consultaSQL){
@@ -70,6 +70,31 @@ public function consultarDatos($consultaSQL){
 
 
 }
+
+public function eliminarDatos($consultaSQL){
+
+    //1.Conectarme a la base de datos
+    $conexionBD=$this->conectarBD();
+
+    //2.Preparar la consulta que se va a realizar
+    $consultaEliminarDatos= $conexionBD->prepare($consultaSQL);
+
+    //3. Ejecutar la consulta
+    $resultado=$consultaEliminarDatos->execute();
+
+    //4. Verificar el resultado
+    if($resultado){
+        echo("Registro eliminado con exito");
+    }else{
+        echo("Error eliminando el registro");
+    }
+
+}
+
+
+
+
+
 
 
 

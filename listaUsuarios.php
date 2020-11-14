@@ -37,6 +37,7 @@
                         <div class="card-body">
                             <h3 class="card-title"><?php echo($usuario["nombre"]) ?></h3>
                             <p class="card-text"><?php echo($usuario["descripcion"]) ?></p>
+                            <a href="eliminarUsuarios.php?id=<?php echo($usuario["idUsuario"])?>" class="btn btn-danger">Eliminar</a>
                         </div>
                     </div>
                 </div>
