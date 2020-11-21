@@ -23,6 +23,10 @@
         $transaccion->agregarDatos($consultaSQL);
 
 
+        //5. REDIRECCION
+        header("location:formularioRegistro.php");
+
+
         
 
         
